@@ -1,14 +1,12 @@
-import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import React from 'react'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import IconButton from '@material-ui/core/IconButton'
+import Typography from '@material-ui/core/Typography'
+import InputBase from '@material-ui/core/InputBase'
+import { fade, makeStyles } from '@material-ui/core/styles'
 import MenuDesplegable from 'components/Menu/MenuDesplegable'
-import SearchIcon from '@material-ui/icons/Search';
-import { CenterFocusStrong } from '@material-ui/icons';
-import {usePopupState,bindTrigger,bindMenu,} from 'material-ui-popup-state/hooks';
+import SearchIcon from '@material-ui/icons/Search'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   search: {
-   
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
@@ -64,10 +61,10 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-}));
+}))
 
 export default function Menu() {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={classes.root}>
@@ -79,7 +76,7 @@ export default function Menu() {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuDesplegable/>
+            <MenuDesplegable />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             RetroGameApp
@@ -100,5 +97,5 @@ export default function Menu() {
         </Toolbar>
       </AppBar>
     </div>
-  );
+  )
 }
